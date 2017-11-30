@@ -1,0 +1,15 @@
+namespace: mu
+environments:
+- name: acceptance
+- name: production
+service:
+  name: python-hello-world
+  port: 80
+  environment:
+    WAITS_VERSION: 0.0.1
+  pathPatterns:
+  - /*
+  pipeline:
+    source:
+      provider: GitHub
+      repo: sniperd/python-hello-world
